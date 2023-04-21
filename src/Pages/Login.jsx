@@ -13,7 +13,7 @@ const Login = () => {
     const handleSubmit = async (e)=>{
         e.preventDefault();
         await logIn(email, password)
-        {user?.email? navigate('/'): setErr('Wrong Password or email');}
+        {user?.email? setErr('Wrong Password or email') :navigate('/') ;}
     };
 
   return (

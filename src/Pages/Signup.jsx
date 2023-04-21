@@ -12,7 +12,9 @@ const Signup = () => {
     const handleSubmit = async (e)=>{
         e.preventDefault()
         await SignUp(email, password)
-        {user?.email? navigate('/'): setErr('Password should be at least 6 characters');}
+        setTimeout(()=>{
+            {user?.email ? setErr('Password should be at least 6 characters') :navigate('/') ;}
+        }, 2000)
     }
 
 
