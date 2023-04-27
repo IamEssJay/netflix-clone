@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import { MdChevronLeft, MdChevronRight } from 'react-icons/md'
-import { User } from 'firebase/auth'
 import { UserAuth } from '../context/AuthContext'
 import { db } from '../Firebase'
 import {doc, onSnapshot} from 'firebase/firestore'
@@ -20,7 +19,7 @@ const SavedShows = () => {
     useEffect(()=>{
         onSnapshot(doc(db,'users',`${user?.email}`,))
     },[user?.email])
-
+console.log (user?.email)
   return (
     <>
     <h2 className='text-white py-4 font-bold md:text-xl '>My Shows</h2>
